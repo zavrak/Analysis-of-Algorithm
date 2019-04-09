@@ -1,0 +1,40 @@
+def findmax(my_list):
+    max=my_list[0]
+    s=-1
+    for i in range(len(my_list)):
+        if(max<=my_list[i]):
+            max=my_list[i]
+            s=i
+    return max,s
+list_1=[155656,585,69,65,2,5,8,7,4,5,6,25,1,5,5,54,5,5,55,56,5]
+findmax(list_1)
+
+
+# In[4]:
+
+import random
+def generate_numbers(n):
+    numbers=[]
+    for i in range(10):
+        s=random.randint(0,10000000)
+        numbers.append(s)
+    return numbers
+n_s=generate_numbers(5000000)
+n_s
+findmax(n_s)
+
+
+# In[5]:
+
+def recursive(n):
+    if(n<2):
+        return n
+    else:
+        return recursive(n-1)+recursive(n-2)
+
+
+# In[6]:
+
+for i in range(10):
+    s=recursive(i)
+    print(s,end=" ")
